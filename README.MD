@@ -31,7 +31,7 @@ The project is organized into several key directories:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/kudzaiprichard/employee-management-system.git
+   git clone https://github.com/jaanaviVelishoju/employee-management-system.git
    cd employee-management-system
    ```
 
@@ -54,7 +54,7 @@ The project is organized into several key directories:
 
 4. **Access the application**:
 
-   The application will be available at `http://localhost:8080`.
+   The application will be available at `http://localhost:8081`.
 
 ## Endpoints
 
@@ -68,7 +68,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/auth/user" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/auth/user" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`POST /api/v1/auth/register`**
@@ -81,7 +81,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/auth/register" -H "Content-Type: application/json" -d '{"email": "test@example.com", "password": "password"}'
+  curl -X POST "http://localhost:8081/api/v1/auth/register" -H "Content-Type: application/json" -d '{"email": "test@example.com", "password": "password"}'
   ```
 
 - **`POST /api/v1/auth/authenticate`**
@@ -94,7 +94,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/auth/authenticate" -H "Content-Type: application/json" -d '{"email": "test@example.com", "password": "password"}'
+  curl -X POST "http://localhost:8081/api/v1/auth/authenticate" -H "Content-Type: application/json" -d '{"email": "test@example.com", "password": "password"}'
   ```
 
 - **`POST /api/v1/auth/refreshToken`**
@@ -107,7 +107,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/auth/refreshToken" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X POST "http://localhost:8081/api/v1/auth/refreshToken" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`GET /api/v1/auth/isAuthenticated`**
@@ -118,7 +118,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/auth/isAuthenticated" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/auth/isAuthenticated" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`GET /api/v1/auth/getLoggedInEmployee`**
@@ -129,7 +129,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/auth/getLoggedInEmployee" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/auth/getLoggedInEmployee" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 ### Employee Management
@@ -142,7 +142,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/employees/" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/employees/" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`POST /api/v1/employees/`**
@@ -155,7 +155,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/employees/" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "John Doe", "position": "Developer"}'
+  curl -X POST "http://localhost:8081/api/v1/employees/" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "John Doe", "position": "Developer"}'
   ```
 
 - **`GET /api/v1/employees/{id}`**
@@ -166,7 +166,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/employees/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/employees/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`PUT /api/v1/employees/{id}`**
@@ -179,7 +179,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X PUT "http://localhost:8080/api/v1/employees/1" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "John Doe", "position": "Senior Developer"}'
+  curl -X PUT "http://localhost:8081/api/v1/employees/1" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "John Doe", "position": "Senior Developer"}'
   ```
 
 - **`DELETE /api/v1/employees/{id}`**
@@ -190,7 +190,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X DELETE "http://localhost:8080/api/v1/employees/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X DELETE "http://localhost:8081/api/v1/employees/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 ### Leave Management
@@ -205,7 +205,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/leave/create" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"employeeId": 1, "startDate": "2024-08-01", "endDate": "2024-08-10"}'
+  curl -X POST "http://localhost:8081/api/v1/leave/create" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"employeeId": 1, "startDate": "2024-08-01", "endDate": "2024-08-10"}'
   ```
 
 - **`GET /api/v1/leave/`**
@@ -216,7 +216,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/leave/" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/leave/" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`GET /api/v1/leave/{id}`**
@@ -227,7 +227,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/leave/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/leave/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`PUT /api/v1/leave/{id}`**
@@ -240,7 +240,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X PUT "http://localhost:8080/api/v1/leave/1" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"startDate": "2024-08-01", "endDate": "2024-08-12"}'
+  curl -X PUT "http://localhost:8081/api/v1/leave/1" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"startDate": "2024-08-01", "endDate": "2024-08-12"}'
   ```
 
 - **`DELETE /api/v1/leave/{id}`**
@@ -251,7 +251,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X DELETE "http://localhost:8080/api/v1/leave/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X DELETE "http://localhost:8081/api/v1/leave/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 ### Notification Management
@@ -264,7 +264,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/notification/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/notification/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`POST /api/v1/notification/markAsSeen/{notificationId}/{employeeId}`**
@@ -277,7 +277,7 @@ The project is organized into several key directories:
 
 **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/notification/markAsSeen/1/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X POST "http://localhost:8081/api/v1/notification/markAsSeen/1/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`GET /api/v1/notification/`**
@@ -288,7 +288,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/notification/" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/notification/" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 ### Project Management
@@ -303,7 +303,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X POST "http://localhost:8080/api/v1/project/create" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "New Project", "description": "Project Description"}'
+  curl -X POST "http://localhost:8081/api/v1/project/create" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "New Project", "description": "Project Description"}'
   ```
 
 - **`GET /api/v1/project/`**
@@ -314,7 +314,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/project/" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/project/" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`GET /api/v1/project/{id}`**
@@ -325,7 +325,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X GET "http://localhost:8080/api/v1/project/1" -H "Authorization: Bearer <your-jwt-token>"
+  curl -X GET "http://localhost:8081/api/v1/project/1" -H "Authorization: Bearer <your-jwt-token>"
   ```
 
 - **`PUT /api/v1/project/{id}`**
@@ -338,7 +338,7 @@ The project is organized into several key directories:
 
   **Example `curl` command**:
   ```bash
-  curl -X PUT "http://localhost:8080/api/v1/project/1" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "Updated Project", "description": "Updated Description"}'
+  curl -X PUT "http://localhost:8081/api/v1/project/1" -H "Content-Type: application/json" -H "Authorization: Bearer <your-jwt-token>" -d '{"name": "Updated Project", "description": "Updated Description"}'
   ```
 
 - **`DELETE /api/v1/project/{id}`**
